@@ -2,7 +2,7 @@
   <div >
     <h1>Страница с постами</h1>
 
-    <my-input v-model="searchQuery" placeholder="Поиск..."></my-input>
+    <my-input v-focus v-model="searchQuery" placeholder="Поиск..."></my-input>
     <div class="app_btns">
       <my-button @click="showDialog">Создать пост</my-button>
       <my-select v-model="selectedSort" :options="sortOptions"></my-select>
@@ -18,7 +18,7 @@
       v-if="!isPostLoading"
     />
     <div v-else>Идет загрузка...</div>
-    <div ref="observer" class="observer"></div>
+    <div v-intersection="loadMorepost"  class="observer"></div>
     <!-- <div class="page_wrapper">
       <div
         class="page"
@@ -141,7 +141,7 @@ export default {
 
     
 
-    const options = {
+    /* const options = {
       root: document.querySelector("#scrollArea"),
       rootMargin: "0px",
       threshold: 1.0,
@@ -153,7 +153,7 @@ export default {
       }
     };
     const observer = new IntersectionObserver(callback, options);
-    observer.observe(this.$refs.observer);
+    observer.observe(this.$refs.observer); */
   },
   computed: {
     sortedPosts() {
@@ -180,7 +180,7 @@ export default {
 <style>
 
 .app_btns {
-  margin: "15px 0";
+ margin: 15px 0;
   display: flex;
   justify-content: space-between;
 }

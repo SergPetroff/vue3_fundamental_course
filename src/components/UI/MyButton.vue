@@ -16,8 +16,8 @@ export default {
   
   padding: 10px 15px;
   background: none;
-  color: blue;
-  border: blue 1px solid;
+  color: teal;
+  border: 1px solid teal;
   cursor: pointer;
 }
 </style>

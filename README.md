@@ -1,4 +1,9 @@
-# vue3_course
+# vue3 fundamental course
+
+Ulbi TV
+https://www.youtube.com/watch?v=XzLuMtDelGk&t=3022s
+
+
 
 ## Project setup
 ```
